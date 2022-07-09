@@ -5,6 +5,12 @@ Title::Title(const InitData& init)
 
 void Title::update()
 {
+	// 左クリックで
+	if (MouseL.down())
+	{
+		// ゲームシーンに遷移
+		changeScene(U"Game");
+	}
 }
 
 void Title::draw() const

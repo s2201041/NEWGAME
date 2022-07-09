@@ -1,5 +1,6 @@
 ﻿# include "Common.h"
 # include "Title.h"
+# include "Game.h"
 
 void Main()
 {
@@ -8,6 +9,8 @@ void Main()
 	App manager;
 
 	manager.add<Title>(U"Title");
+
+	manager.add<Game>(U"Game");
 
 	while (System::Update())
 	{
