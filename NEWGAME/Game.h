@@ -6,10 +6,9 @@ public:
 
 	Game(const InitData& init)
 		: IScene{ init }
-		, m_texture{ U"🐈"_emoji }
 	{
-		Print << U"Game::Game()";
 	}
+
 
 	void update() override;
 
@@ -17,5 +16,6 @@ public:
 
 private:
 
-	Texture m_texture;
+	Vec2 playerPos{ 400, 500 };
+
 };

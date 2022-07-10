@@ -6,6 +6,8 @@ void Main()
 {
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy);
 
+	TextureAsset::Register(U"player", U"texture/player.png", TextureDesc::Mipped);
+
 	App manager;
 
 	manager.add<Title>(State::Title);

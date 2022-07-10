@@ -1,7 +1,19 @@
 ﻿#include "Game.h"
 
+
+
 void Game::update() {
 	// 左クリックで
+
+	constexpr double playerSpeed = 550.0;
+
+	const double deltaTime = Scene::DeltaTime();
+
+	//プレイヤーを動かすやつ
+	const Vec2 move = Vec2{ (KeyRight.pressed() - KeyLeft.pressed()), (KeyDown.pressed() - KeyUp.pressed()) }
+	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));
+	playerPos.moveBy(move).clamp(Scene::Rect());
+
 	if (MouseL.down())
 	{
 		// タイトルシーンに遷移
@@ -11,7 +23,10 @@ void Game::update() {
 
 void Game::draw() const
 {
-	Scene::SetBackground(ColorF(0.2, 0.8, 0.6));
+	//ドット感を残すおまじない的な何か
+	const ScopedRenderStates2D state(SamplerState::ClampNearest);
 
-	m_texture.drawAt(Cursor::Pos());
+	TextureAsset(U"player").scaled(4.0).draw(playerPos);
+
+	Scene::SetBackground(ColorF(0.2, 0.8, 0.6));
 }
