@@ -9,7 +9,7 @@ void Title::update()
 	if (MouseL.down())
 	{
 		// ゲームシーンに遷移
-		changeScene(U"Game");
+		changeScene(State::Game);
 	}
 }
 

@@ -1,6 +1,12 @@
 ﻿#pragma once
 # include <Siv3D.hpp>
 
-using App = SceneManager<String>;
+enum class State
+{
+	Title,
+	Game
+};
+
+using App = SceneManager<State>;
 
 

@@ -8,9 +8,9 @@ void Main()
 
 	App manager;
 
-	manager.add<Title>(U"Title");
+	manager.add<Title>(State::Title);
 
-	manager.add<Game>(U"Game");
+	manager.add<Game>(State::Game);
 
 	while (System::Update())
 	{

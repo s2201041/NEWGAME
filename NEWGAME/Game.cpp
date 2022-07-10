@@ -5,7 +5,7 @@ void Game::update() {
 	if (MouseL.down())
 	{
 		// タイトルシーンに遷移
-		changeScene(U"Title");
+		changeScene(State::Title);
 	}
 }
 

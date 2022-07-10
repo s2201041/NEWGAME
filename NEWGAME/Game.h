@@ -11,11 +11,6 @@ public:
 		Print << U"Game::Game()";
 	}
 
-	~Game()
-	{
-		Print << U"Game::~Game()";
-	}
-
 	void update() override;
 
 	void draw() const override;
