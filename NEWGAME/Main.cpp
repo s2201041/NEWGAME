@@ -10,8 +10,6 @@ void Main()
 
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy, FontStyle::Bitmap);
 
-	TextureAsset::Register(U"player", U"texture/player.png", TextureDesc::Mipped);
-
 	TextureAsset::Register(U"haikei", U"texture/haikei.png", TextureDesc::Mipped);
 
 	//sceneの追加

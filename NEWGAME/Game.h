@@ -20,7 +20,8 @@ private:
 
 	const double deltaTime = Scene::DeltaTime();
 
-	//Player座標を宣言
-	Vec2 playerPos{ 400, 500 };
+	//オブジェクトの座標を宣言
+	Vec2 enemyPos{ 400, 500 };
 
+	Vec2 playerPos{ 400, 500 };
 };
