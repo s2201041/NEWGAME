@@ -4,7 +4,8 @@
 enum class State
 {
 	Title,
-	Game
+	Select,
+	Game,
 };
 
 using App = SceneManager<State>;
