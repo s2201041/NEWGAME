@@ -4,6 +4,8 @@
 # include "Game.h"
 # include "Select.h"
 
+//変更
+
 void Main()
 {
 	//assetの追加
