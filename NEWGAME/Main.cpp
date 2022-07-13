@@ -4,7 +4,7 @@
 # include "Game.h"
 # include "Select.h"
 
-//変更
+//newbranch
 
 void Main()
 {
