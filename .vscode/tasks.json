@@ -2,14 +2,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "Siv3d build",
             "type": "process",
             "command": "vsdevcmd-debug.bat",
-            "args": [
-                "/property:GenerateFullPaths=true",
-                "/t:build",
-                "/consoleloggerparameters:NoSummary"
-            ],
+            "args": ["NEWGAME"],
             "group": "build",
             "presentation": {
                 "reveal": "silent"
@@ -20,13 +16,7 @@
             "type": "cppbuild",
             "label": "C/C++: cl.exe アクティブなファイルのビルド",
             "command": "cl.exe",
-            "args": [
-                "/Zi",
-                "/EHsc",
-                "/nologo",
-                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${file}"
-            ],
+            "args": ["NEWGAME"],
             "options": {
                 "cwd": "${fileDirname}"
             },
