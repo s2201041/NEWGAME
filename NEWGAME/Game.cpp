@@ -1,5 +1,7 @@
 ﻿#include "Game.h"
 
+//testes
+
 Game::Game(const InitData& init)
 	: IScene{ init }
 {
