@@ -4,13 +4,7 @@
 # include "Game.h"
 # include "Select.h"
 
-//コミットtest
-
-//hoge
-//テスト　伊藤
-//機能の追加s
-
-//開発用ブランチ
+//開発ベース ver0.0
 
 void Main()
 {
