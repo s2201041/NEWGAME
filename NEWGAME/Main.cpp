@@ -6,7 +6,7 @@
 
 void Main()
 {
-	//sceneを跨いで使用するアセットはここで定義
+	//sceneを跨いで使用するアセットはここで定義.
 
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy, FontStyle::Bitmap);
 
