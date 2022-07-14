@@ -4,11 +4,9 @@
 # include "Game.h"
 # include "Select.h"
 
-//newbranch
-
 void Main()
 {
-	//assetの追加
+	//sceneを跨いで使用するアセットはここで定義
 
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy, FontStyle::Bitmap);
 
@@ -26,10 +24,10 @@ void Main()
 
 	while (System::Update())
 	{
-		//ドット感
+		//ドット感を出す呪文
 		const ScopedRenderStates2D state(SamplerState::ClampNearest);
 
-		//window名
+		//window名を設定
 		Window::SetTitle(U"NewGame");
 
 		if (not manager.update())
