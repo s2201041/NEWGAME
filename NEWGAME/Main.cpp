@@ -4,6 +4,8 @@
 # include "Game.h"
 # include "Select.h"
 
+//コミットtest
+
 void Main()
 {
 	//sceneを跨いで使用するアセットはここで定義.
