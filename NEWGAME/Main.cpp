@@ -6,6 +6,8 @@
 
 //コミットtest
 
+//hoge
+
 void Main()
 {
 	//sceneを跨いで使用するアセットはここで定義.
