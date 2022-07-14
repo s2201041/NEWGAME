@@ -1,5 +1,6 @@
 ﻿#include "Game.h"
 
+
 Game::Game(const InitData& init)
 	: IScene{ init }
 {
