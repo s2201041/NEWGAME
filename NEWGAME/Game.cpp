@@ -4,6 +4,7 @@ Game::Game(const InitData& init)
 	: IScene{ init }
 {
 	Print << getData().stage;
+	player = Texture{ U"texture/player.png" };
 }
 
 void Game::update() {
@@ -18,6 +19,16 @@ void Game::update() {
 	{
 		// タイトルシーンに遷移
 		changeScene(State::Title);
+	}
+
+	if (getData().inputUp.pressed()|| getData().inputDown.pressed())
+	{
+		player = Texture{ U"texture/player.png" };
+	}
+
+	if (getData().inputLeft.pressed())
+	{
+		player = Texture{ U"texture/player2.png" };
 	}
 }
 

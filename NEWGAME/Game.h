@@ -26,7 +26,8 @@ private:
 	Vec2 playerPos{ 400, 500 };
 
 	//テクスチャの読み込み
-	const Texture player{ U"texture/player.png" };
+	//const Texture player{ U"texture/player.png" };
+	Texture player;
 
 	const Texture enemy{ U"texture/enemy.png" };
 };
