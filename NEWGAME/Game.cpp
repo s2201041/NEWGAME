@@ -24,9 +24,9 @@ void Game::update() {
 void Game::draw() const
 {
 
-	TextureAsset(U"haikei").scaled(4.0).draw();
+	TextureAsset(U"haikei").scaled(2.0).draw();
 
-	enemy.scaled(4.0).draw(enemyPos);
+	//enemy.scaled(2.0).draw(enemyPos);
 
-	player.scaled(4.0).draw(playerPos);
+	player.scaled(2.0).draw(playerPos);
 }
