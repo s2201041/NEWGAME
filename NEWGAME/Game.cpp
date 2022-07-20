@@ -1,15 +1,15 @@
 ﻿#include "Game.h"
-
-
+#include "enemy.h"
 Game::Game(const InitData& init)
 	: IScene{ init }
 {
+	Print << getData().stage;
 }
 
 void Game::update() {
 
 	//プレイヤーを動かす
-	const Vec2 move = Vec2{ (KeyRight.pressed() - KeyLeft.pressed()), (KeyDown.pressed() - KeyUp.pressed()) }
+	const Vec2 move = Vec2{ (getData().inputRight.pressed() - getData().inputLeft.pressed()), (getData().inputDown.pressed() - getData().inputUp.pressed()) }
 	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));
 
 	playerPos.moveBy(move).clamp(Scene::Rect());

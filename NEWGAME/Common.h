@@ -1,8 +1,7 @@
 ﻿#pragma once
 # include <Siv3D.hpp>
 
-//masterbranch
-
+//シーン
 enum class State
 {
 	Title,
@@ -10,4 +9,17 @@ enum class State
 	Game,
 };
 
-using App = SceneManager<State>;
+//シーン間で共有するデータ
+struct GameData
+{
+	//選択したステージ
+	int8 stage = 0;
+
+	//キーコンフィグ
+	InputGroup inputLeft = KeyLeft;
+	InputGroup inputRight = KeyRight;
+	InputGroup inputUp = KeyUp;
+	InputGroup inputDown = KeyDown;
+};
+
+using App = SceneManager<State,GameData>;

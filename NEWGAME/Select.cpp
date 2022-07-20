@@ -12,6 +12,9 @@ void Select::update()
 	{
 		// ゲームシーンに遷移
 		changeScene(State::Game);
+
+		//ステージ1を選択
+		getData().stage = 1;
 	}
 }
 

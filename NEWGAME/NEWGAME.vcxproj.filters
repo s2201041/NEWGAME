@@ -797,5 +797,11 @@
     <ClInclude Include="Select.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
