@@ -8,12 +8,9 @@
 
 class enemy : entity {
 
-	//コンストラクタ
-	enemy();
+	int8 hp = 0;
 
-	int8 hp;
-
-	Vec2 Pos;
+	Vec2 Pos{0,0};
 };
 
 #endif

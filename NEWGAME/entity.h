@@ -8,13 +8,17 @@
 
 class entity {
 
-	//コンストラクタ
-	entity() {
-
+	//１フレーム毎の処理
+	void update() {
 	}
-	int8 hp;
 
-	Vec2 Pos;
+	//描画
+	void draw() {
+	}
+
+	int8 hp ;
+
+	Vec2 pos ;
 };
 
 #endif

@@ -1,19 +1,28 @@
 ﻿#include "Game.h"
 #include "enemy.h"
+
 Game::Game(const InitData& init)
 	: IScene{ init }
 {
+	//デバッグ用
 	Print << getData().stage;
+
+	//テクスチャの初期化
 	player = Texture{ U"texture/player.png" };
+
+
+	enemy Enemy;
+
+	//Enemy.update();
 }
 
 void Game::update() {
 
-	//プレイヤーを動かす
-	const Vec2 move = Vec2{ (getData().inputRight.pressed() - getData().inputLeft.pressed()), (getData().inputDown.pressed() - getData().inputUp.pressed()) }
-	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));
 
-	playerPos.moveBy(move).clamp(Scene::Rect());
+	//プレイヤーを動かす
+	playermove();
+
+
 
 	if (MouseL.down())
 	{
@@ -40,4 +49,12 @@ void Game::draw() const
 	//enemy.scaled(2.0).draw(enemyPos);
 
 	player.scaled(2.0).draw(playerPos);
+}
+
+void Game::playermove()
+{
+	const Vec2 move = Vec2{ (getData().inputRight.pressed() - getData().inputLeft.pressed()), (getData().inputDown.pressed() - getData().inputUp.pressed()) }
+	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));
+
+	playerPos.moveBy(move).clamp(Scene::Rect());
 }

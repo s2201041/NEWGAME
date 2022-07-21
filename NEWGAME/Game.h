@@ -14,6 +14,9 @@ public:
 	// 描画関数（オプション）
 	void draw() const override;
 
+	//プレイヤー動作関数
+	void playermove();
+
 private:
 
 	static constexpr double playerSpeed = 550.0;
@@ -29,5 +32,5 @@ private:
 	//const Texture player{ U"texture/player.png" };
 	Texture player;
 
-	const Texture enemy{ U"texture/enemy.png" };
+	//const Texture enemy{ U"texture/enemy.png" };
 };

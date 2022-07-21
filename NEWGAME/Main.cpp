@@ -11,20 +11,17 @@
 void Main()
 {
 	//sceneを跨いで使用するアセットはここで定義.
-
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy, FontStyle::Bitmap);
-
 	TextureAsset::Register(U"haikei", U"texture/haikei.png", TextureDesc::Mipped);
 
 	//sceneの追加
-
 	App manager;
-	
 	manager.add<Title>(State::Title);
-
 	manager.add<Select>(State::Select);
-
 	manager.add<Game>(State::Game);
+
+	// ゲームシーンから開始したい場合はこのコメントを外す
+	manager.init(State::Select);
 
 	while (System::Update())
 	{
