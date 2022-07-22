@@ -1,5 +1,5 @@
 ﻿#include "Game.h"
-#include "enemy.h"
+
 
 Game::Game(const InitData& init)
 	: IScene{ init }
@@ -10,19 +10,15 @@ Game::Game(const InitData& init)
 	//テクスチャの初期化
 	player = Texture{ U"texture/player.png" };
 
-
-	enemy Enemy;
-
-	//Enemy.update();
 }
 
 void Game::update() {
 
+	//プレイヤーの動作処理
+	playerAction();
 
-	//プレイヤーを動かす
-	playermove();
-
-
+	//敵の動作処理
+	enemy.update();
 
 	if (MouseL.down())
 	{
@@ -43,15 +39,15 @@ void Game::update() {
 
 void Game::draw() const
 {
-
 	TextureAsset(U"haikei").scaled(2.0).draw();
 
-	//enemy.scaled(2.0).draw(enemyPos);
-
 	player.scaled(2.0).draw(playerPos);
+
+	//敵の描画処理
+	enemy.draw();
 }
 
-void Game::playermove()
+void Game::playerAction()
 {
 	const Vec2 move = Vec2{ (getData().inputRight.pressed() - getData().inputLeft.pressed()), (getData().inputDown.pressed() - getData().inputUp.pressed()) }
 	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));

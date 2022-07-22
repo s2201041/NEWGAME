@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Common.h"
+#include "entity.h"
 
 class Game : public App::Scene
 {
@@ -8,14 +9,16 @@ public:
 	// コンストラクタ（必ず実装）
 	Game(const InitData& init);
 
-	// 更新関数（オプション）
+	// 更新関数（オプションb）
 	void update() override;
 
 	// 描画関数（オプション）
 	void draw() const override;
 
 	//プレイヤー動作関数
-	void playermove();
+	void playerAction();
+
+	entity enemy{ String{ U"texture/enemy.png" } };
 
 private:
 
@@ -32,5 +35,4 @@ private:
 	//const Texture player{ U"texture/player.png" };
 	Texture player;
 
-	//const Texture enemy{ U"texture/enemy.png" };
 };
