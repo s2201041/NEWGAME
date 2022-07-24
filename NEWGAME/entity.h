@@ -6,31 +6,24 @@
 
 #include "common.h"
 
-class entity {
+class Entity {
 
 public:
 
 	//コンストラクタ
-	entity(const String& string)
-		:m_texture{ string }
-	{
-	}
+	Entity(const String& string);
 
 	//１フレーム毎の処理
-	void update() {
-			Pos.x -= 1 ;
-	}
+	void update();
 
 	//描画
-	void draw() const{
-		m_texture.scaled(2.0).draw(Pos);
-	}
+	void draw() const ;
 
 private:
 
 	Texture m_texture;
-
-	Vec2 Pos{ 0,0 };
+	 
+	Vec2 Pos;
 };
 
 #endif

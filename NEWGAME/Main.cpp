@@ -10,6 +10,9 @@
 
 void Main()
 {
+	Scene::SetResizeMode(ResizeMode::Keep);
+	Window::SetStyle(WindowStyle::Sizable);
+
 	//sceneを跨いで使用するアセットはここで定義.
 	FontAsset::Register(U"TitleFont", 60, Typeface::Heavy, FontStyle::Bitmap);
 	TextureAsset::Register(U"haikei", U"texture/haikei.png", TextureDesc::Mipped);

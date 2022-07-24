@@ -20,20 +20,12 @@ void Game::update() {
 	//敵の動作処理
 	enemy.update();
 
+	for(auto& sh : shot)
+		sh.update();
+
 	if (MouseL.down())
 	{
-		// タイトルシーンに遷移
-		changeScene(State::Title);
-	}
-
-	if (getData().inputUp.pressed()|| getData().inputDown.pressed())
-	{
-		player = Texture{ U"texture/player.png" };
-	}
-
-	if (getData().inputLeft.pressed())
-	{
-		player = Texture{ U"texture/player2.png" };
+		shot << Shot{ String{ U"texture/enemy.png" } ,playerPos ,90 ,90 };
 	}
 }
 
@@ -45,9 +37,14 @@ void Game::draw() const
 
 	//敵の描画処理
 	enemy.draw();
+
+	for (auto& sh : shot)
+		sh.draw();
+
+	FontAsset(U"TitleFont")(playerPos.x).drawAt(Scene::Center());
 }
 
-void Game::playerAction()
+inline void Game::playerAction()
 {
 	const Vec2 move = Vec2{ (getData().inputRight.pressed() - getData().inputLeft.pressed()), (getData().inputDown.pressed() - getData().inputUp.pressed()) }
 	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));

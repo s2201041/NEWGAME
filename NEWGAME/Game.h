@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Common.h"
-#include "entity.h"
+#include "Entity.h"
+#include "Shot.h"
 
 class Game : public App::Scene
 {
@@ -18,7 +19,11 @@ public:
 	//プレイヤー動作関数
 	void playerAction();
 
-	entity enemy{ String{ U"texture/enemy.png" } };
+	Entity enemy{ String{ U"texture/enemy.png" } };
+
+	Array<Shot> shot;
+
+
 
 private:
 

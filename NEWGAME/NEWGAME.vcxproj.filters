@@ -136,6 +136,18 @@
     <Filter Include="Resource Files\engine\font\min">
       <UniqueIdentifier>{1b103960-f11a-4515-b4f1-f59333ce00d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\entity">
+      <UniqueIdentifier>{8702d73c-0fad-4cf0-9969-752ddbb2ae08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\entity">
+      <UniqueIdentifier>{c4bd642b-9517-4425-a8dd-2c24eb3d4bcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shot">
+      <UniqueIdentifier>{24e83404-e1b2-40a3-b6ab-d0035342a05a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shot">
+      <UniqueIdentifier>{cceb55c1-4adf-4b84-b300-e64e4607d629}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -153,8 +165,11 @@
     <ClCompile Include="Title.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game2.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Shot.cpp">
+      <Filter>Source Files\shot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -800,14 +815,14 @@
     <ClInclude Include="Select.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="enemy.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\entity</Filter>
     </ClInclude>
-    <ClInclude Include="entity.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Game2.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Shot.h">
+      <Filter>Header Files\shot</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
