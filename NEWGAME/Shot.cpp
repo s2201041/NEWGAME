@@ -1,7 +1,7 @@
 ﻿#include "Shot.h"
 
-Shot::Shot(const String& string,Vec2 pos,int vel,int dir)
-	:m_texture{ string }
+Shot::Shot( Vec2 pos, Vec2 dir, int vel)
+	:m_texture{ U"texture/Shot.png" }
 {
 	Pos = pos;
 	Vel = vel;
@@ -10,8 +10,7 @@ Shot::Shot(const String& string,Vec2 pos,int vel,int dir)
 
 void Shot::update()
 {
-	Pos.x += cos(Dir) * (Scene::DeltaTime() * Vel);
-	Pos.y += sin(Dir) * (Scene::DeltaTime() * Vel);
+	Pos += Dir * (Scene::DeltaTime() * Vel);
 }
 
 void Shot::draw() const

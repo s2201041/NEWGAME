@@ -2,6 +2,7 @@
 #include "Common.h"
 #include "Entity.h"
 #include "Shot.h"
+#include "Shot2.h"
 
 class Game : public App::Scene
 {
@@ -22,7 +23,6 @@ public:
 	Entity enemy{ String{ U"texture/enemy.png" } };
 
 	Array<Shot> shot;
-
 
 
 private:

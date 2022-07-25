@@ -4,7 +4,7 @@
 Game::Game(const InitData& init)
 	: IScene{ init }
 {
-	//デバッグ用
+	//ステージ表示
 	Print << getData().stage;
 
 	//テクスチャの初期化
@@ -25,21 +25,24 @@ void Game::update() {
 
 	if (MouseL.down())
 	{
-		shot << Shot{ String{ U"texture/enemy.png" } ,playerPos ,90 ,90 };
+		shot << Shot{ playerPos ,{0,-1} ,100 };
 	}
+
 }
 
 void Game::draw() const
 {
+	//背景の描画
 	TextureAsset(U"haikei").scaled(2.0).draw();
 
-	player.scaled(2.0).draw(playerPos);
-
-	//敵の描画処理
-	enemy.draw();
-
+	//ショットの描画
 	for (auto& sh : shot)
 		sh.draw();
+
+	player.scaled(2.0).draw(playerPos.x-32,playerPos.y-32);
+
+	//敵の描画
+	enemy.draw();
 
 	FontAsset(U"TitleFont")(playerPos.x).drawAt(Scene::Center());
 }

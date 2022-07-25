@@ -15,7 +15,7 @@ struct GameData
 	//選択したステージ
 	int8 stage = 0;
 
-	//キーコンフィグ
+	//キーコンフィグの定義
 	InputGroup inputLeft = KeyLeft;
 	InputGroup inputRight = KeyRight;
 	InputGroup inputUp = KeyUp;

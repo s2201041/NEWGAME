@@ -11,7 +11,7 @@ class Shot {
 public:
 
 	//コンストラクタ
-	Shot(const String& string, Vec2 pos, int vel, int dir);
+	Shot( Vec2 pos, Vec2 dir, int vel);
 
 	//１フレーム毎の処理
 	void update();
@@ -23,10 +23,11 @@ private:
 
 	Texture m_texture;
 
-	Vec2 Pos;
+	//座標と向きの定義
+	Vec2 Pos ,Dir;
 
-	//向きと速度の定義
-	int8 Vel , Dir;
+	//速度の定義
+	int8 Vel;
 };
 
 #endif
