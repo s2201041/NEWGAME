@@ -72,7 +72,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <DisableSpecificWarnings>26451;26812;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -114,13 +114,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Select.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene\Game.cpp" />
+    <ClCompile Include="Scene\Select.cpp" />
+    <ClCompile Include="Scene\Title.cpp" />
     <ClCompile Include="Shot.cpp" />
     <ClCompile Include="Shot2.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\engine\texture\box-shadow\128.png" />
@@ -319,12 +320,13 @@
     <ClInclude Include="Common.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Select.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Scene\Game.h" />
+    <ClInclude Include="Scene\Select.h" />
+    <ClInclude Include="Scene\Title.h" />
     <ClInclude Include="Shot.h" />
     <ClInclude Include="Shot2.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Title.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App\example\obj\blacksmith.obj">

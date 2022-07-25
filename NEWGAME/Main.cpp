@@ -1,8 +1,8 @@
 ﻿# include "Common.h"
-# include "Title.h"
-# include "Select.h"
-# include "Game.h"
-# include "Select.h"
+# include "Scene\Title.h"
+# include "Scene\Select.h"
+# include "Scene\Game.h"
+# include "Scene\Select.h"
 
 //開発ベース ver0.0
 
