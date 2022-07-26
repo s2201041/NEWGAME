@@ -136,15 +136,6 @@
     <Filter Include="Resource Files\engine\font\min">
       <UniqueIdentifier>{1b103960-f11a-4515-b4f1-f59333ce00d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{d0c1e6fe-fece-4758-ab9e-442ca32085f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Source Files">
-      <UniqueIdentifier>{f45cf35a-c89d-4c71-928b-2c05dd6d1d44}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Header Files">
-      <UniqueIdentifier>{1c8bf8a5-bc15-4f91-87c3-6400fabf6d19}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -159,20 +150,17 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shot2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\Game.cpp">
-      <Filter>Scene\Source Files</Filter>
+    <ClCompile Include="Title.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\Select.cpp">
-      <Filter>Scene\Source Files</Filter>
+    <ClCompile Include="Select.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\Title.cpp">
-      <Filter>Scene\Source Files</Filter>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -818,20 +806,17 @@
     <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shot2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\Title.h">
-      <Filter>Scene\Header Files</Filter>
+    <ClInclude Include="Title.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\Select.h">
-      <Filter>Scene\Header Files</Filter>
+    <ClInclude Include="Select.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\Game.h">
-      <Filter>Scene\Header Files</Filter>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

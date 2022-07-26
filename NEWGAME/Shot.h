@@ -11,7 +11,7 @@ class Shot {
 public:
 
 	//コンストラクタ
-	Shot( Vec2 pos, Vec2 dir, int vel);
+	Shot( Vec2 pos, Vec2 dir, int8 vel,int8 typ);
 
 	//１フレーム毎の処理
 	void update();
@@ -28,6 +28,9 @@ private:
 
 	//速度の定義
 	int8 Vel;
+
+	//球の種類の定義
+	int8 Typ;
 };
 
 #endif
