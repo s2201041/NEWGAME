@@ -17,7 +17,7 @@ void Shot::update()
 		Pos += Dir * (Scene::DeltaTime() * Vel);
 		break;
 	case 2:
-		Pos += Dir * (Scene::DeltaTime() * Vel * 2);
+		Pos += Dir * Abs(sin(Scene::Time()/10)) * 10;
 		break;
 	}
 }

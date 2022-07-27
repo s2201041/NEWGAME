@@ -49,7 +49,7 @@ void Game::draw() const
 	//敵の描画
 	enemy.draw();
 
-	FontAsset(U"TitleFont")(playerPos.x).drawAt(Scene::Center());
+	FontAsset(U"TitleFont")(Scene::Time()).drawAt(Scene::Center());
 }
 
 inline void Game::playerAction()

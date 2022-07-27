@@ -20,7 +20,7 @@ public:
 	//プレイヤー動作関数
 	void playerAction();
 
-	Entity enemy{ String{ U"texture/enemy.png" } };
+	Entity enemy{ { 600 , 50 },1 };
 
 	Array<Shot> shot;
 
