@@ -5,6 +5,7 @@
 #define PLAYER_H
 
 #include "common.h"
+#include "Shot.h"
 
 class Player {
 
@@ -28,6 +29,9 @@ private:
 
 	//速度の定義
 	int8 Vel;
+
+	//ショットの定義
+	Array<Shot> shot;
 
 	static constexpr double playerSpeed = 550.0;
 

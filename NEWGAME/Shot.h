@@ -30,7 +30,7 @@ private:
 	int8 Vel;
 
 	//球の種類の定義
-	int8 Typ;
+	int8 Type;
 };
 
 #endif

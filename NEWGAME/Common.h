@@ -20,6 +20,7 @@ struct GameData
 	InputGroup inputRight = KeyRight;
 	InputGroup inputUp = KeyUp;
 	InputGroup inputDown = KeyDown;
+	InputGroup inputShot = KeySpace;
 };
 
 using App = SceneManager<State,GameData>;

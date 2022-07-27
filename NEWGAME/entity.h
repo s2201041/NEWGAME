@@ -32,12 +32,15 @@ private:
 	int8 Vel;
 
 	//敵の種類の定義
-	int8 Typ;
+	int8 Type;
 
 	//敵のHPの定義
 	int8 Hp;
 
-	//敵のショットの定義
+	//タイマー変数の定義
+	double Time;
+
+	//ショットの定義
 	Array<Shot> shot;
 };
 
