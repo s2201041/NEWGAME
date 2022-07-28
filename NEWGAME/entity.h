@@ -20,6 +20,12 @@ public:
 	//描画
 	void draw() const ;
 
+	//コライダーを返す関数
+	Circle col();
+
+	//ショットの定義
+	Array<Shot> shot;
+
 private:
 
 
@@ -39,9 +45,6 @@ private:
 
 	//タイマー変数の定義
 	double Time;
-
-	//ショットの定義
-	Array<Shot> shot;
 };
 
 #endif

@@ -14,12 +14,15 @@ void Player::update()
 
 	//キー操作
 	const Vec2 move = Vec2{ (KeyRight.pressed() - KeyLeft.pressed()), (KeyDown.pressed() - KeyUp.pressed()) }
-	.setLength(deltaTime * playerSpeed * (KeyShift.pressed() ? 0.5 : 1.0));
+	.setLength(deltaTime * Vel * (KeyShift.pressed() ? 0.5 : 1.0));
 
 	Pos.moveBy(move).clamp(Scene::Rect());
 
-	if (KeySpace.down())
+	if (KeySpace.down()) {
 		shot << Shot{ Pos ,{0,-1} ,100 ,1 };
+	}
+
+	Print << Pos;
 
 	//ショットの動作処理
 	for (auto& sh : shot)

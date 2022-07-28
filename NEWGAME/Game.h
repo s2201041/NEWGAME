@@ -17,14 +17,8 @@ public:
 	void draw() const override;
 
 	Array<Player> player;
-
 	Array<Entity> entity;
-
-	Array<Shot> shot;
 
 private:
 
-	static constexpr double playerSpeed = 550.0;
-
-	const double deltaTime = Scene::DeltaTime();
 };

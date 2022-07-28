@@ -5,6 +5,7 @@
 #define SHOT_H
 
 #include "common.h"
+#include "Game.h"
 
 class Shot {
 
@@ -18,6 +19,9 @@ public:
 
 	//描画
 	void draw() const;
+
+	//コライダーを返す関数
+	Circle col();
 
 private:
 

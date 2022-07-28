@@ -6,7 +6,7 @@ Entity::Entity( Vec2 pos, int8 type )
 	Pos = pos;
 	Type = type;
 
-	//ストップウォッチの宣言
+	//ストップウォッチの初期化
 	Time = 0;
 
 	//デバッグ用
@@ -24,13 +24,9 @@ Entity::Entity( Vec2 pos, int8 type )
 
 void Entity::update()
 {
-	const double t = Scene::Time();
-
 	//タイプ別の動作処理の分岐
 	switch (Type) {
 	case 1:
-
-		const Circle Col{ Pos, 32 };
 
 		Pos.x = Scene::Center().x - Sin(Scene::Time()) * 250;
 
@@ -47,7 +43,6 @@ void Entity::update()
 	//ショットの処理
 	for (auto& sh : shot)
 		sh.update();
-
 }
 
 void Entity::draw() const
@@ -56,5 +51,9 @@ void Entity::draw() const
 	for (auto& sh : shot)
 		sh.draw();
 
-	m_texture.scaled(2.0).draw(Pos);
+	m_texture.scaled(2.0).drawAt(Pos);
+}
+
+Circle Entity::col() {
+	return Circle{ Pos, 32 };
 }

@@ -33,8 +33,6 @@ private:
 	//ショットの定義
 	Array<Shot> shot;
 
-	static constexpr double playerSpeed = 550.0;
-
 	const double deltaTime = Scene::DeltaTime();
 };
 
