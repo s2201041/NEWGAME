@@ -22,7 +22,6 @@ void Player::update()
 		shot << Shot{ Pos ,{0,-1} ,100 ,1 };
 	}
 
-	Print << Pos;
 
 	//ショットの動作処理
 	for (auto& sh : shot)

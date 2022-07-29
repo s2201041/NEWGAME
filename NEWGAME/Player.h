@@ -20,6 +20,9 @@ public:
 	//描画
 	void draw() const;
 
+	//ショットの定義
+	Array<Shot> shot;
+
 private:
 
 	Texture m_texture;
@@ -29,9 +32,6 @@ private:
 
 	//速度の定義
 	int8 Vel;
-
-	//ショットの定義
-	Array<Shot> shot;
 
 	const double deltaTime = Scene::DeltaTime();
 };

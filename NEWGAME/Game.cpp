@@ -8,7 +8,7 @@ Game::Game(const InitData& init)
 	Print << getData().stage;
 
 	entity << Entity{ { 600 , 50 },1 };
-	player << Player{ {0,0} ,{0,0}, 550 };
+	player << Player{ {0,0} ,{0,0}, 5500 };
 }
 
 void Game::update() {

@@ -34,6 +34,7 @@ void Shot::draw() const
 		Col.draw();
 		m_texture.scaled(2.0).drawAt(Pos);
 		break;
+
 	case 2:
 		m_texture.scaled(4.0).drawAt(Pos);
 		break;

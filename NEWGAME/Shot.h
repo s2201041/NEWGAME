@@ -5,7 +5,6 @@
 #define SHOT_H
 
 #include "common.h"
-#include "Game.h"
 
 class Shot {
 

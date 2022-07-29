@@ -797,9 +797,6 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Shot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
