@@ -1,11 +1,11 @@
 ﻿#include "Player.h"
 
-Player::Player(Vec2 pos, Vec2 dir, int vel)
+Player::Player(Vec2 pos, int vel)
 	:m_texture{ U"texture/player.png" }
 {
 	Pos = pos;
 	Vel = vel;
-	Dir = dir;
+	Dir = { 0,0 };
 }
 
 void Player::update() 
@@ -14,7 +14,7 @@ void Player::update()
 
 	//キー操作
 	const Vec2 move = Vec2{ (KeyRight.pressed() - KeyLeft.pressed()), (KeyDown.pressed() - KeyUp.pressed()) }
-	.setLength(deltaTime * Vel * (KeyShift.pressed() ? 0.5 : 1.0));
+	.setLength(deltaTime * 550 * (KeyShift.pressed() ? 0.5 : 1.0));
 
 	Pos.moveBy(move).clamp(Scene::Rect());
 

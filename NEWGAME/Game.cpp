@@ -8,7 +8,7 @@ Game::Game(const InitData& init)
 	Print << getData().stage;
 
 	entity << Entity{ { 600 , 50 },1 };
-	player << Player{ {0,0} ,{0,0}, 5500 };
+	player << Player{ {0,0} , 550 };
 }
 
 void Game::update() {
@@ -24,11 +24,12 @@ void Game::update() {
 
 	//衝突判定
 	for (auto& en : entity) {
-		for (auto& sh : en.shot) {
-			if (en.col().intersects(sh.col()))
-				Print << U"衝突";
-
-		}
+		for (auto& pl : player)
+			for (auto& sh : pl.shot ) 
+				if (en.col().intersects(sh.col())){
+					sh.cla();
+					en.cla();
+				}
 	}
 }
 

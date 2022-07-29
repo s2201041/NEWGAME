@@ -1,6 +1,6 @@
 ﻿#include "Shot.h"
 
-Shot::Shot( Vec2 pos, Vec2 dir, int8 vel,int8 type)
+Shot::Shot( Vec2 pos, Vec2 dir, int vel,int type)
 	:m_texture{ U"texture/Shot.png" }
 {
 	Pos = pos;
@@ -43,4 +43,8 @@ void Shot::draw() const
 
 Circle Shot::col() {
 	return Circle{ Pos, 8 };
+}
+
+void Shot::cla() {
+	m_texture = Texture{ U"texture/Enemy.png" };
 }

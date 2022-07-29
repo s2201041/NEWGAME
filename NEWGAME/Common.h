@@ -13,7 +13,7 @@ enum class State
 struct GameData
 {
 	//選択したステージ
-	int8 stage = 0;
+	int stage = 0;
 
 	//キーコンフィグの定義
 	InputGroup inputLeft = KeyLeft;

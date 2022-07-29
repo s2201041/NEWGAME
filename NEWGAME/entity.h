@@ -12,7 +12,7 @@ class Entity {
 public:
 
 	//コンストラクタ
-	Entity(Vec2 pos, int8 typ);
+	Entity(Vec2 pos, int typ);
 
 	//１フレーム毎の処理
 	void update();
@@ -22,6 +22,9 @@ public:
 
 	//コライダーを返す関数
 	Circle col();
+
+	//諸突処理関数
+	void cla();
 
 	//ショットの定義
 	Array<Shot> shot;
@@ -35,13 +38,15 @@ private:
 	Vec2 Pos, Dir;
 
 	//速度の定義
-	int8 Vel;
+	int Vel;
 
 	//敵の種類の定義
-	int8 Type;
+	int Type;
 
 	//敵のHPの定義
-	int8 Hp;
+	int Hp;
+
+	double size;
 
 	//タイマー変数の定義
 	double Time;

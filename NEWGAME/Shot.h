@@ -11,7 +11,7 @@ class Shot {
 public:
 
 	//コンストラクタ
-	Shot( Vec2 pos, Vec2 dir, int8 vel,int8 typ);
+	Shot( Vec2 pos, Vec2 dir, int vel,int typ);
 
 	//１フレーム毎の処理
 	void update();
@@ -22,18 +22,21 @@ public:
 	//コライダーを返す関数
 	Circle col();
 
+	//衝突処理関数
+	void cla();
+
 private:
 
 	Texture m_texture;
 
 	//座標と向きの定義
-	Vec2 Pos ,Dir;
+	Vec2 Pos, Dir;
 
 	//速度の定義
-	int8 Vel;
+	int Vel;
 
 	//球の種類の定義
-	int8 Type;
+	int Type;
 };
 
 #endif

@@ -12,7 +12,7 @@ class Player {
 public:
 
 	//コンストラクタ
-	Player(Vec2 pos, Vec2 dir, int vel);
+	Player(Vec2 pos, int vel);
 
 	//１フレーム毎の処理
 	void update();
@@ -31,7 +31,7 @@ private:
 	Vec2 Pos, Dir;
 
 	//速度の定義
-	int8 Vel;
+	int Vel;
 
 	const double deltaTime = Scene::DeltaTime();
 };

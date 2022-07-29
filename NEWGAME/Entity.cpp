@@ -1,10 +1,12 @@
 ﻿#include "Entity.h"
 
-Entity::Entity( Vec2 pos, int8 type )
+Entity::Entity( Vec2 pos, int type )
 	:m_texture{ String{ U"texture/enemy.png" } }
 {
 	Pos = pos;
 	Type = type;
+
+	size = 2.0;
 
 	//ストップウォッチの初期化
 	Time = 0;
@@ -51,9 +53,15 @@ void Entity::draw() const
 	for (auto& sh : shot)
 		sh.draw();
 
-	m_texture.scaled(2.0).drawAt(Pos);
+	m_texture.scaled(size).drawAt(Pos);
 }
 
 Circle Entity::col() {
 	return Circle{ Pos, 32 };
+}
+
+void Entity::cla() {
+	for (size = 0; size < 2 ; ) {
+		size += Scene::DeltaTime();
+	}
 }
